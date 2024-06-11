@@ -6,11 +6,11 @@ This is the Adafruit HX711 24-bit ADC library
 
 Tested and works great with the Adafruit HX711 Breakout Board: https://www.adafruit.com/product/XXXX
 
-This chip uses pseudo-SPI to communicate, ay 2 pins are required to interface
+This chip uses pseudo-SPI to communicate, any 2 pins are required to interface
 
 Adafruit invests time and resources providing this open source code, please support Adafruit and open-source hardware by purchasing products from Adafruit!
 
-Written by Limor Fried for Adafruit Industries.  
+Written by Limor Fried for Adafruit Industries.
 MIT license, check license.txt for more information
 All text above must be included in any redistribution
 
