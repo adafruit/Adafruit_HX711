@@ -22,6 +22,7 @@ public:
   int32_t readChannel(hx711_chanGain_t chanGain = CHAN_A_GAIN_128);
   int32_t readChannelRaw(hx711_chanGain_t chanGain = CHAN_A_GAIN_128);
   int32_t readChannelBlocking(hx711_chanGain_t chanGain = CHAN_A_GAIN_128);
+  void tare(uint8_t tareSize = 10, hx711_chanGain_t chanGain = CHAN_A_GAIN_128);
   void tareA(int32_t tareValue);
   void tareB(int32_t tareValue);
 

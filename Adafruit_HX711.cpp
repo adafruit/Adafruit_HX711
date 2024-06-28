@@ -98,6 +98,29 @@ int32_t Adafruit_HX711::readChannelRaw(hx711_chanGain_t chanGain) {
 bool Adafruit_HX711::isBusy() { return digitalRead(_dataPin) == HIGH; }
 
 /**
+ * @brief Perform a 'tare' operation
+ * This function reads the sensor 'tareSize' times and calculates the average
+ * value to use as the 'tare' offset
+ *
+ * @param readings Number of readings to average for the tare offset
+ */
+void Adafruit_HX711::tare(uint8_t readings, hx711_chanGain_t chanGain) {
+  // Set the gain
+  readChannelRaw(chanGain);
+
+  int64_t sum = 0;
+  for (uint16_t i = 0; i < readings; i++) {
+    sum += readChannelRaw(chanGain);
+  }
+
+  if (chanGain == CHAN_B_GAIN_32) {
+    _tareValueB = sum / readings;
+  } else {
+    _tareValueA = sum / readings;
+  }
+}
+
+/**
  * @brief Set the raw 'tare' offset for channel A
  * @param tareValue Signed i32 that is added to channel A readings
  */

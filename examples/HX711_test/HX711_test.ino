@@ -19,15 +19,11 @@ void setup() {
   // Initialize the HX711
   hx711.begin();
 
-  // read and toss 3 values each
+  // tare each channel
   Serial.println("Tareing....");
-  for (uint8_t t=0; t<3; t++) {
-    hx711.tareA(hx711.readChannelRaw(CHAN_A_GAIN_128));
-    hx711.tareA(hx711.readChannelRaw(CHAN_A_GAIN_128));
-    hx711.tareB(hx711.readChannelRaw(CHAN_B_GAIN_32));
-    hx711.tareB(hx711.readChannelRaw(CHAN_B_GAIN_32));
-  }
-} 
+  hx711.tare(10, CHAN_A_GAIN_128);
+  hx711.tare(10, CHAN_B_GAIN_32);
+}
 
 void loop() {
   // Read from Channel A with Gain 128, can also try CHAN_A_GAIN_64 or CHAN_B_GAIN_32
