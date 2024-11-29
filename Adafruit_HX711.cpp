@@ -16,7 +16,7 @@ Adafruit_HX711::Adafruit_HX711(uint8_t dataPin, uint8_t clockPin) {
  * Sets up the pin modes and performs a power reset
  */
 void Adafruit_HX711::begin() {
-  pinMode(_dataPin, INPUT);
+  pinMode(_dataPin, INPUT_PULLUP);
   pinMode(_clockPin, OUTPUT);
   powerDown(true);  // Perform a power reset
   delay(1);         // Hold pin high for 1 ms for reset

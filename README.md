@@ -10,7 +10,8 @@ This chip uses pseudo-SPI to communicate, ay 2 pins are required to interface
 
 Adafruit invests time and resources providing this open source code, please support Adafruit and open-source hardware by purchasing products from Adafruit!
 
-Written by Limor Fried for Adafruit Industries.  
+Written by Limor Fried for Adafruit Industries and ChatGPT 4 https://chatgpt.com/share/f976c960-d283-42cc-bf2e-6a7d0968d396
+
 MIT license, check license.txt for more information
 All text above must be included in any redistribution
 
